@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springaction.springaction1.mapper.CoffeeMapper">
+    <select id="getCoffeeList" resultType="Coffee">
+        select  * from  bi.t_coffee limit 2
+    </select>
+
+    <insert id="save" parameterType="Coffee">
+        insert into bi.t_coffee(name,price) values(#{name},#{price})
+    </insert>
+
+    <update id="update" parameterType="Coffee">
+        update bi.t_coffee set name = #{name},price = #{price} where id = #{id}
+    </update>
+</mapper>
