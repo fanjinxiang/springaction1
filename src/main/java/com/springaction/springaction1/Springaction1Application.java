@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.transaction.TransactionManager;
 
@@ -18,6 +19,7 @@ import java.sql.SQLException;
 //@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class,
 //		DataSourceTransactionManagerAutoConfiguration.class,
 //		JdbcTemplateAutoConfiguration.class})
+@ComponentScan
 @Slf4j
 public class Springaction1Application implements CommandLineRunner{
 
